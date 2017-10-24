@@ -1,0 +1,37 @@
+//
+//  ViewController.swift
+//  sampleAlert
+//
+//  Created by yuka on 24/10/2017.
+//  Copyright © 2017 yuka. All rights reserved.
+//
+
+import UIKit
+
+class ViewController: UIViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+
+    @IBAction func tapCheck(_ sender: UIButton) {
+
+        //部品となるアラートを作成
+        let alert = UIAlertController(title: "問題です。", message: "温泉で使うお湯をすくう物の名前は？", preferredStyle: .alert)
+        
+        //アラートにOKボタンを追加
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {action in print("桶")}))
+        
+        //アラートを表示する
+        //completion: 動作が完了した後に発動される処理の指定
+        present(alert, animated: true, completion: {()->Void in print("やーやー")}                                                                   )
+    }
+    
+}
+
